@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.head{
+    height: 20%;
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px  rgb(255, 255, 255);
+    color:  rgb(253, 4, 83);
+    font-size: 40px;
+}
+
+.first, .second, .third, .four, .five, .six, .seven, .eight, .nine {
+    position: relative;
+    top: 0;
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+    height: 50%;
+    width: 90%;
+    margin: 2% 5%;
+}
+video{
+    align-items:center;
+    margin-top: 16px;
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+}
+#loopButton {
+    top: 0;
+    margin: 5px 5px;
+    cursor: pointer;
+  }
+
+@media (max-width: 768px) {
+  
+    .body-section {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .first-section{
+        margin: 10px 10px;
+    }
+  
+    .first,
+    .second,
+    .third,
+    .four,
+    .five,
+    .six,
+    .seven,
+    .eight,
+    .nine {
+      width: 90%;
+      height: 30%;
+      margin: 5% 5%;
+    }
+    video {
+        height: 90%;
+        width: 80%;
+    }
+    i{
+      font-size: 5px;
+    }
+  }
+  

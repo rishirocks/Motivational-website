@@ -1,0 +1,81 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="style2.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <div class="head">
+           <h2>Motivation</h2>
+           <h6 style="float:right;text-shadow: 2px 2px 4px rgb(126, 149, 149); color:rgba(10, 10, 9)">~Rakesh.V</h6>
+        </div>
+        <div class="body-section">
+            <div class="first">
+                <video src="video1.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+            </div>
+            <div class="second">
+                <video src="video2.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+            </div>
+            <div class="third">
+                <video src="video3.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+            </div>
+             <div class="four">
+                <video src="video6.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+             </div>
+             <div class="five">
+                <video src="video5.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+             </div>
+             <div class="six">
+                <video src="video7.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+             </div>
+             <div class="seven">
+                <video src="video9.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+             </div>
+             <div class="nine">
+                <video src="video8.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+             </div>  
+             <div class="eight">
+                <video src="video4.mp4" controls loop></video>
+                <i id="loopButton" class="fas fa-redo-alt" style="font-size: 30px;"></i>
+             </div>  
+        </div>
+    </body>
+     <script>
+    // Get references to video elements and loop buttons
+    var videoElements = document.querySelectorAll('video');
+    var loopButtons = document.querySelectorAll('.fa-redo-alt');
+    var isLooping = [];
+
+    // Initialize the isLooping array
+    for (var i = 0; i < videoElements.length; i++) {
+      isLooping.push(false);
+    }
+
+    // Attach click event listeners to loop buttons
+    for (var i = 0; i < loopButtons.length; i++) {
+      loopButtons[i].addEventListener('click', toggleLooping.bind(null, i));
+    }
+
+    // Function to toggle looping for a specific video
+    function toggleLooping(index) {
+      isLooping[index] = !isLooping[index];
+      var video = videoElements[index];
+      var loopButton = loopButtons[index];
+
+      if (isLooping[index]) {
+        video.setAttribute('loop', 'true');
+        loopButton.style.opacity = '0.5'; // Visual indication that looping is enabled
+      } else {
+        video.removeAttribute('loop');
+        loopButton.style.opacity = '1'; // Visual indication that looping is disabled
+      }
+    }
+  </script>
+</html>
